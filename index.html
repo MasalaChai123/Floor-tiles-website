@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>欣昕工程行 - 專業地磚維修行</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #F9FAFB; /* bg-gray-50 */
+      color: #1e293b; /* text-slate-800 */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Custom scrollbar for a more refined look */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d1d5db;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9ca3af;
+    }
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .mobile-menu.open {
+      max-height: 500px; /* Adjust as needed */
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="#home" class="flex items-center gap-3">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-slate-900">
+          <path d="M5 5 H95 V95 H5 Z"></path>
+          <path d="M5 40 H95"></path>
+          <path d="M5 75 H95"></path>
+          <path d="M37 75 V95"></path>
+          <path d="M63 75 V95"></path>
+          <path d="M95 40 A55 55 0 0 0 42 88"></path>
+          <path d="M50 40 A30 30 0 0 0 25 65"></path>
+        </svg>
+        <div class="flex flex-col">
+          <span class="text-xl font-black tracking-widest text-slate-900">XINXIN</span>
+          <span class="text-xs font-semibold tracking-[0.2em] text-slate-500">ENGINEERING</span>
+        </div>
+      </a>
+      
+      <nav class="hidden md:flex items-center">
+        <a href="#home" class="px-4 py-2 text-sm font-semibold tracking-wider uppercase text-slate-600 hover:text-slate-900 transition-colors duration-300">首頁</a>
+        <a href="#about" class="px-4 py-2 text-sm font-semibold tracking-wider uppercase text-slate-600 hover:text-slate-900 transition-colors duration-300">關於我們</a>
+        <a href="#process" class="px-4 py-2 text-sm font-semibold tracking-wider uppercase text-slate-600 hover:text-slate-900 transition-colors duration-300">服務流程</a>
+        <a href="#contact" class="px-4 py-2 text-sm font-semibold tracking-wider uppercase text-slate-600 hover:text-slate-900 transition-colors duration-300">聯繫我們</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-slate-900 focus:outline-none">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="md:hidden bg-white shadow-lg mobile-menu">
+      <nav class="flex flex-col items-center py-4">
+        <a href="#home" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">首頁</a>
+        <a href="#about" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">關於我們</a>
+        <a href="#process" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">服務流程</a>
+        <a href="#contact" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">聯繫我們</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-gray-100">
+      <div class="absolute inset-0 bg-white" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;)"></div>
+      <div class="relative z-10 text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-4">
+          專業地磚維修，精準每一片
+        </h1>
+        <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+          欣昕工程行提供高品質的地磚鋪設、修補與翻新服務。我們注重細節，追求完美，為您的空間帶來歷久彌新的美感。
+        </p>
+        <a href="#contact" class="inline-block bg-slate-900 text-white font-bold py-3 px-8 rounded-md hover:bg-slate-700 transition-colors duration-300 text-lg shadow-lg">
+          免費諮詢估價
+        </a>
+      </div>
+    </section>
+
+    <!-- About & Showcase Section -->
+    <section id="about" class="py-20 md:py-32 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="text-left">
+            <h2 class="text-sm font-bold uppercase text-slate-500 tracking-widest mb-2">關於我們</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">數十年經驗的工匠精神</h3>
+            <p class="text-slate-600 leading-relaxed mb-4">
+              欣昕工程行是一家專注於地磚維修與鋪設的專業團隊。我們相信，地面不僅是建築的基礎，更是空間美學的延伸。憑藉多年的實務經驗與對工藝的堅持，我們處理過各種複雜的地磚問題，從微小的裂縫修補到大面積的整體翻新。
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              我們的團隊使用最先進的工具與高品質的材料，確保每一次施工都達到最高標準。客戶的滿意是我們最大的成就，我們致力於提供可靠、高效且美觀的解決方案。
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <img src="https://images.pexels.com/photos/7218525/pexels-photo-7218525.jpeg" alt="Craftsman carefully installing floor tiles" class="rounded-lg shadow-lg object-cover w-full h-full" loading="lazy" />
+            </div>
+            <div class="space-y-4">
+              <img src="https://images.pexels.com/photos/3754293/pexels-photo-3754293.jpeg" alt="Modern bathroom with elegant white and grey tiles" class="rounded-lg shadow-lg object-cover w-full h-auto" loading="lazy" />
+              <img src="https://images.pexels.com/photos/8089257/pexels-photo-8089257.jpeg" alt="Close-up of a tiler applying grout between new floor tiles" class="rounded-lg shadow-lg object-cover w-full h-auto" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 md:py-32 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-sm font-bold uppercase text-slate-500 tracking-widest mb-2">服務流程</h2>
+          <h3 class="text-3xl md:text-4xl font-bold text-slate-900">簡單四步驟，解決您的地磚問題</h3>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center">
+            <div class="bg-gray-100 rounded-full p-4 mb-6 inline-flex">
+              <svg class="h-10 w-10 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2">1. 現場勘查</h4>
+            <p class="text-slate-600 leading-relaxed">專業團隊到府評估，了解您的需求與現場狀況，提供初步建議。</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center">
+            <div class="bg-gray-100 rounded-full p-4 mb-6 inline-flex">
+              <svg class="h-10 w-10 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2">2. 透明報價</h4>
+            <p class="text-slate-600 leading-relaxed">根據勘查結果，提供詳細且透明的施工報價單，無隱藏費用。</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center">
+            <div class="bg-gray-100 rounded-full p-4 mb-6 inline-flex">
+              <svg class="h-10 w-10 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 011-1h1a2 2 0 100-4H7a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2">3. 精準施工</h4>
+            <p class="text-slate-600 leading-relaxed">由經驗豐富的師傅進行施工，確保工藝品質與工程進度。</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center">
+            <div class="bg-gray-100 rounded-full p-4 mb-6 inline-flex">
+              <svg class="h-10 w-10 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2">4. 驗收完成</h4>
+            <p class="text-slate-600 leading-relaxed">施工完成後，與您一同驗收，確保您滿意後才算完工。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold uppercase text-slate-500 tracking-widest mb-2">聯繫我們</h2>
+          <h3 class="text-3xl md:text-4xl font-bold text-slate-900">準備好開始了嗎？</h3>
+          <p class="text-slate-600 mt-4 max-w-2xl mx-auto">我們隨時準備為您服務。您可以透過以下任何方式與我們聯繫，我們會盡快回覆您。</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-10 mb-16">
+          <div class="bg-gray-50 p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm">
+            <div class="text-slate-700">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8">
+                <defs>
+                  <mask id="line-mask-card">
+                    <rect width="24" height="24" fill="white"/>
+                    <text x="12" y="13.5" font-family="'Noto Sans TC', sans-serif" font-size="7.5" font-weight="900" fill="black" text-anchor="middle" dominant-baseline="middle">LINE</text>
+                  </mask>
+                </defs>
+                <path d="M12,3C6.9,3,3,6.9,3,12c0,4.2,2.7,7.8,6.5,9.2L11,23l1.5-2.5C16.9,19.5,21,16.1,21,12C21,6.9,16.9,3,12,3z" mask="url(#line-mask-card)"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 my-3">LINE</h4>
+            <p class="text-slate-600 mb-4">@xinxin_eng</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="mt-auto bg-slate-900 text-white font-bold py-2 px-6 rounded-md hover:bg-slate-700 transition-colors duration-300 w-full">加入好友</a>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm">
+            <div class="text-slate-700">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2c-.55,0-1,.45-1,1v2h3v3h-3v6.95c5.05-.5,9-4.76,9-9.95Z"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 my-3">Facebook</h4>
+            <p class="text-slate-600 mb-4">欣昕工程行粉絲專頁</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="mt-auto bg-slate-900 text-white font-bold py-2 px-6 rounded-md hover:bg-slate-700 transition-colors duration-300 w-full">前往專頁</a>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm">
+            <div class="text-slate-700">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 my-3">電話</h4>
+            <p class="text-slate-600 mb-4">0912-345-678</p>
+            <a href="tel:0912345678" class="mt-auto bg-slate-900 text-white font-bold py-2 px-6 rounded-md hover:bg-slate-700 transition-colors duration-300 w-full">立即撥打</a>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.011833531109!2d121.5623352759882!3d25.03361102781521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abadd1151479%3A0x66c3746aa500693a!2sTaipei%20101!5e0!3m2!1sen!2stw!4v1680000000000!5m2!1sen!2stw" 
+              width="100%" 
+              height="100%" 
+              style="border: 0; min-height: 450px;"
+              allowfullscreen="true"
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Contact Buttons -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <a href="#" aria-label="LINE" target="_blank" rel="noopener noreferrer" class="bg-slate-800 text-white h-12 w-12 rounded-full flex items-center justify-center shadow-lg hover:bg-slate-600 transition-colors duration-300">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7">
+        <defs>
+          <mask id="line-mask-sticky">
+            <rect width="24" height="24" fill="white"/>
+            <text x="12" y="13.5" font-family="'Noto Sans TC', sans-serif" font-size="7.5" font-weight="900" fill="black" text-anchor="middle" dominant-baseline="middle">LINE</text>
+          </mask>
+        </defs>
+        <path d="M12,3C6.9,3,3,6.9,3,12c0,4.2,2.7,7.8,6.5,9.2L11,23l1.5-2.5C16.9,19.5,21,16.1,21,12C21,6.9,16.9,3,12,3z" mask="url(#line-mask-sticky)"></path>
+      </svg>
+    </a>
+    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="bg-slate-800 text-white h-12 w-12 rounded-full flex items-center justify-center shadow-lg hover:bg-slate-600 transition-colors duration-300">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2c-.55,0-1,.45-1,1v2h3v3h-3v6.95c5.05-.5,9-4.76,9-9.95Z"></path></svg>
+    </a>
+    <a href="tel:0912345678" aria-label="Phone" class="bg-slate-800 text-white h-12 w-12 rounded-full flex items-center justify-center shadow-lg hover:bg-slate-600 transition-colors duration-300">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-gray-400">
+    <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <div class="flex items-center gap-3 mb-4 md:mb-0">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white">
+          <path d="M5 5 H95 V95 H5 Z"></path>
+          <path d="M5 40 H95"></path>
+          <path d="M5 75 H95"></path>
+          <path d="M37 75 V95"></path>
+          <path d="M63 75 V95"></path>
+          <path d="M95 40 A55 55 0 0 0 42 88"></path>
+          <path d="M50 40 A30 30 0 0 0 25 65"></path>
+        </svg>
+        <div>
+          <span class="text-lg font-black tracking-widest text-white">XINXIN</span>
+          <span class="block text-xs font-semibold tracking-widest text-gray-400">ENGINEERING</span>
+        </div>
+      </div>
+      <div class="text-sm">
+        <p>&copy; <span id="year"></span> 欣昕工程行 版權所有。</p>
+        <p>專業地磚維修服務</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Header scroll effect
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          header.classList.add('bg-white/80', 'shadow-md', 'backdrop-blur-sm');
+          header.classList.remove('bg-transparent');
+        } else {
+          header.classList.remove('bg-white/80', 'shadow-md', 'backdrop-blur-sm');
+          header.classList.add('bg-transparent');
+        }
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIconOpen = document.getElementById('menu-icon-open');
+      const menuIconClose = document.getElementById('menu-icon-close');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+      const toggleMenu = () => {
+        mobileMenu.classList.toggle('open');
+        menuIconOpen.classList.toggle('hidden');
+        menuIconClose.classList.toggle('hidden');
+      };
+      
+      menuToggle.addEventListener('click', toggleMenu);
+
+      // Close menu when a link is clicked
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (mobileMenu.classList.contains('open')) {
+            toggleMenu();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
