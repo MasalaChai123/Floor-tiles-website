@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>欣昕工程行 - 專業地磚維修行</title>
+  
+  <!-- SEO Configuration: Edit the content below for Google Search results -->
+  <meta name="description" content="欣昕工程行專注於專業地磚修補服務。我們提供高品質、低噪音、無塵的施工體驗，讓您的地板煥然一新。">
+  <meta name="keywords" content="地磚維修, 磁磚隆起, 空心磁磚, 地磚翻新, 欣昕工程行, 專業泥作">
+  <!-- End SEO Configuration -->
+
+  <!-- Favicon: Replace href="logo.jpg" below with your actual icon file path to show your logo in the browser tab -->
+  <link rel="icon" href="media/logo.jpg" type="image/jpeg">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,29 +69,17 @@
   <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
     <div class="container mx-auto px-6 py-3 flex justify-between items-center">
       <a href="#home" class="flex items-center gap-3">
-        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-slate-900">
-          <path d="M5 5 H95 V95 H5 Z"></path>
-          <path d="M5 40 H95"></path>
-          <path d="M5 75 H95"></path>
-          <path d="M37 75 V95"></path>
-          <path d="M63 75 V95"></path>
-          <path d="M95 40 A55 55 0 0 0 42 88"></path>
-          <path d="M50 40 A30 30 0 0 0 25 65"></path>
-        </svg>
+        <!-- Header Logo Image: Replace src="logo.jpg" with your actual logo file path -->
+        <img src="media/logo.jpg" alt="XINXIN Logo" class="h-10 w-10 object-contain rounded">
         <div class="flex flex-col">
           <span class="text-xl font-black tracking-widest text-slate-900">XINXIN</span>
           <span class="text-xs font-semibold tracking-[0.2em] text-slate-500">ENGINEERING</span>
         </div>
       </a>
       
-      <nav class="hidden md:flex items-center">
-        <a href="#home" class="px-4 py-2 text-sm font-semibold tracking-wider uppercase text-slate-600 hover:text-slate-900 transition-colors duration-300">首頁</a>
-        <a href="#about" class="px-4 py-2 text-sm font-semibold tracking-wider uppercase text-slate-600 hover:text-slate-900 transition-colors duration-300">關於我們</a>
-        <a href="#process" class="px-4 py-2 text-sm font-semibold tracking-wider uppercase text-slate-600 hover:text-slate-900 transition-colors duration-300">服務流程</a>
-        <a href="#contact" class="px-4 py-2 text-sm font-semibold tracking-wider uppercase text-slate-600 hover:text-slate-900 transition-colors duration-300">聯繫我們</a>
-      </nav>
+      <!-- Desktop navigation links removed to use hamburger menu on all devices -->
 
-      <div class="md:hidden">
+      <div>
         <button id="menu-toggle" class="text-slate-900 focus:outline-none">
           <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -94,10 +91,11 @@
       </div>
     </div>
     
-    <div id="mobile-menu" class="md:hidden bg-white shadow-lg mobile-menu">
+    <div id="mobile-menu" class="bg-white shadow-lg mobile-menu">
       <nav class="flex flex-col items-center py-4">
         <a href="#home" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">首頁</a>
         <a href="#about" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">關於我們</a>
+        <a href="#cases" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">施工案例</a>
         <a href="#process" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">服務流程</a>
         <a href="#contact" class="mobile-nav-link py-3 text-slate-700 hover:text-slate-900 w-full text-center">聯繫我們</a>
       </nav>
@@ -152,36 +150,173 @@
       </div>
     </section>
 
+    <!-- Cases Section (Carousel) -->
+    <section id="cases" class="py-6 md:py-32 bg-gray-50 overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-4 md:mb-12 reveal-on-scroll">
+          <h2 class="text-sm font-bold uppercase text-slate-500 tracking-widest mb-2">施工案例</h2>
+          <h3 class="text-3xl md:text-4xl font-bold text-slate-900">實績見證，品質保證</h3>
+          <p class="text-slate-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">
+            我們以專業技術解決各種地磚疑難雜症，左右滑動查看我們的實際施工案例對比。
+          </p>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto group">
+          
+          <!-- Prev Button -->
+          <button id="prev-case" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-12 z-20 bg-white/90 text-slate-800 p-3 rounded-full shadow-lg hover:bg-slate-900 hover:text-white transition-all duration-300 focus:outline-none hidden md:block opacity-0 group-hover:opacity-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+
+          <!-- Scroll Container -->
+          <div id="cases-container" class="flex overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 pb-2 md:pb-8 no-scrollbar scroll-smooth">
+            
+            <!-- Case 1 -->
+            <div class="min-w-full md:min-w-[850px] snap-center bg-white rounded-xl shadow-sm overflow-hidden reveal-on-scroll shrink-0 border border-gray-100">
+              <!-- Switch grid to vertical on mobile (grid-cols-1) and horizontal on desktop (md:grid-cols-2) -->
+              <div class="relative h-auto md:h-96 grid grid-cols-1 md:grid-cols-2">
+                <!-- Image Wrapper: Fixed height on mobile, full height on desktop. Border adjustment. -->
+                <div class="relative h-36 md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-white/20">
+                  <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800"
+                       srcset="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                               https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
+                               https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w"
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                       alt="Before repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" decoding="async">
+                  <div class="absolute inset-0 bg-black/10"></div>
+                  <span class="absolute top-2 left-2 md:top-4 md:left-4 bg-slate-900/90 text-white text-[10px] md:text-lg font-bold px-2 py-1 md:px-3 md:py-1.5 rounded backdrop-blur-sm shadow-lg z-10">施工前</span>
+                </div>
+                <div class="relative h-36 md:h-full overflow-hidden">
+                  <img src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800"
+                       srcset="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                               https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
+                               https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w"
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                       alt="After repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" decoding="async">
+                  <span class="absolute top-2 left-2 md:top-4 md:left-4 bg-emerald-600/90 text-white text-[10px] md:text-lg font-bold px-2 py-1 md:px-3 md:py-1.5 rounded backdrop-blur-sm shadow-lg z-10">施工後</span>
+                </div>
+              </div>
+              <div class="p-3 md:p-8 text-center md:text-left">
+                <h4 class="text-base md:text-2xl font-bold text-slate-900 mb-1 md:mb-3">客廳地磚隆起修復</h4>
+                <p class="text-slate-600 text-xs md:text-base leading-relaxed">
+                  針對因為熱脹冷縮導致的地磚隆起，採用微創灌注工法，在不破壞磁磚的前提下，將其牢固黏合，恢復平整地面。
+                </p>
+              </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="min-w-full md:min-w-[850px] snap-center bg-white rounded-xl shadow-sm overflow-hidden reveal-on-scroll shrink-0 border border-gray-100">
+              <div class="relative h-auto md:h-96 grid grid-cols-1 md:grid-cols-2">
+                <div class="relative h-36 md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-white/20">
+                  <img src="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg?auto=compress&cs=tinysrgb&w=800"
+                       srcset="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                               https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
+                               https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w"
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                       alt="Before repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" decoding="async">
+                   <div class="absolute inset-0 bg-black/10"></div>
+                  <span class="absolute top-2 left-2 md:top-4 md:left-4 bg-slate-900/90 text-white text-[10px] md:text-lg font-bold px-2 py-1 md:px-3 md:py-1.5 rounded backdrop-blur-sm shadow-lg z-10">施工前</span>
+                </div>
+                <div class="relative h-36 md:h-full overflow-hidden">
+                  <img src="https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=800"
+                       srcset="https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                               https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
+                               https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w"
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                       alt="After repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" decoding="async">
+                  <span class="absolute top-2 left-2 md:top-4 md:left-4 bg-emerald-600/90 text-white text-[10px] md:text-lg font-bold px-2 py-1 md:px-3 md:py-1.5 rounded backdrop-blur-sm shadow-lg z-10">施工後</span>
+                </div>
+              </div>
+              <div class="p-3 md:p-8 text-center md:text-left">
+                <h4 class="text-base md:text-2xl font-bold text-slate-900 mb-1 md:mb-3">空心磁磚高壓灌注</h4>
+                <p class="text-slate-600 text-xs md:text-base leading-relaxed">
+                  檢測出空心區域後，利用精密儀器鑽孔並注入高強度黏著劑，徹底解決空鼓問題，避免日後破裂風險。
+                </p>
+              </div>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="min-w-full md:min-w-[850px] snap-center bg-white rounded-xl shadow-sm overflow-hidden reveal-on-scroll shrink-0 border border-gray-100">
+              <div class="relative h-auto md:h-96 grid grid-cols-1 md:grid-cols-2">
+                <div class="relative h-36 md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-white/20">
+                  <img src="https://images.pexels.com/photos/8092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+                       srcset="https://images.pexels.com/photos/8092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400 400w,
+                               https://images.pexels.com/photos/8092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800 800w,
+                               https://images.pexels.com/photos/8092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200 1200w"
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                       alt="Before repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" decoding="async">
+                   <div class="absolute inset-0 bg-black/10"></div>
+                  <span class="absolute top-2 left-2 md:top-4 md:left-4 bg-slate-900/90 text-white text-[10px] md:text-lg font-bold px-2 py-1 md:px-3 md:py-1.5 rounded backdrop-blur-sm shadow-lg z-10">施工前</span>
+                </div>
+                <div class="relative h-36 md:h-full overflow-hidden">
+                  <img src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=800"
+                       srcset="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                               https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
+                               https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w"
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                       alt="After repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" decoding="async">
+                  <span class="absolute top-2 left-2 md:top-4 md:left-4 bg-emerald-600/90 text-white text-[10px] md:text-lg font-bold px-2 py-1 md:px-3 md:py-1.5 rounded backdrop-blur-sm shadow-lg z-10">施工後</span>
+                </div>
+              </div>
+              <div class="p-3 md:p-8 text-center md:text-left">
+                <h4 class="text-base md:text-2xl font-bold text-slate-900 mb-1 md:mb-3">老舊地磚全面翻新</h4>
+                <p class="text-slate-600 text-xs md:text-base leading-relaxed">
+                  為屋齡超過30年的老屋進行地磚健檢與翻新，保留復古風格的同時，強化結構安全，讓老屋重獲新生。
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Next Button -->
+          <button id="next-case" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-12 z-20 bg-white/90 text-slate-800 p-3 rounded-full shadow-lg hover:bg-slate-900 hover:text-white transition-all duration-300 focus:outline-none hidden md:block opacity-0 group-hover:opacity-100">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+          
+          <!-- Dots Indicator -->
+          <div id="carousel-dots" class="flex justify-center mt-6 gap-2">
+            <!-- Dots will be generated by JS -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
     <!-- Process Section -->
-    <section id="process" class="py-20 md:py-32 bg-gray-50">
+    <section id="process" class="py-20 md:py-32 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12 reveal-on-scroll">
           <h2 class="text-sm font-bold uppercase text-slate-500 tracking-widest mb-2">服務流程</h2>
           <h3 class="text-3xl md:text-4xl font-bold text-slate-900">簡單四步驟，解決您的地磚問題</h3>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center reveal-on-scroll">
+          <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center reveal-on-scroll">
             <div class="bg-gray-100 rounded-full p-4 mb-6 inline-flex">
               <svg class="h-10 w-10 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
             </div>
             <h4 class="text-xl font-bold text-slate-900 mb-2">1. 現場勘查</h4>
             <p class="text-slate-600 leading-relaxed">專業團隊到府評估，了解您的需求與現場狀況，提供初步建議。</p>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center reveal-on-scroll" style="transition-delay: 100ms;">
+          <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center reveal-on-scroll" style="transition-delay: 100ms;">
             <div class="bg-gray-100 rounded-full p-4 mb-6 inline-flex">
               <svg class="h-10 w-10 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
             </div>
             <h4 class="text-xl font-bold text-slate-900 mb-2">2. 透明報價</h4>
             <p class="text-slate-600 leading-relaxed">根據勘查結果，提供詳細且透明的施工報價單，無隱藏費用。</p>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center reveal-on-scroll" style="transition-delay: 200ms;">
+          <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center reveal-on-scroll" style="transition-delay: 200ms;">
             <div class="bg-gray-100 rounded-full p-4 mb-6 inline-flex">
               <svg class="h-10 w-10 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 011-1h1a2 2 0 100-4H7a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
             </div>
             <h4 class="text-xl font-bold text-slate-900 mb-2">3. 精準施工</h4>
             <p class="text-slate-600 leading-relaxed">採用我們獨家的無塵工法，由經驗豐富的師傅精準作業，快速解決您的地磚問題。</p>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center reveal-on-scroll" style="transition-delay: 300ms;">
+          <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center reveal-on-scroll" style="transition-delay: 300ms;">
             <div class="bg-gray-100 rounded-full p-4 mb-6 inline-flex">
               <svg class="h-10 w-10 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             </div>
@@ -193,7 +328,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-32 bg-white">
+    <section id="contact" class="py-20 md:py-32 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16 reveal-on-scroll">
           <h2 class="text-sm font-bold uppercase text-slate-500 tracking-widest mb-2">聯繫我們</h2>
@@ -202,7 +337,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
-          <div class="bg-gray-50 p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm reveal-on-scroll hover:-translate-y-2 transition-transform duration-300">
+          <div class="bg-white p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm reveal-on-scroll hover:-translate-y-2 transition-transform duration-300">
             <div class="text-slate-700">
               <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8">
                 <defs>
@@ -218,7 +353,7 @@
             <p class="text-slate-600 mb-4">@xinxin_eng</p>
             <a href="https://lin.ee/Yc1ueYy" target="_blank" rel="noopener noreferrer" class="mt-auto bg-slate-900 text-white font-bold py-2 px-6 rounded-md hover:bg-slate-700 transition-colors duration-300 w-full">加入好友</a>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm reveal-on-scroll hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 100ms;">
+          <div class="bg-white p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm reveal-on-scroll hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 100ms;">
             <div class="text-slate-700">
               <svg class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2c-.55,0-1,.45-1,1v2h3v3h-3v6.95c5.05-.5,9-4.76,9-9.95Z"></path></svg>
             </div>
@@ -226,7 +361,7 @@
             <p class="text-slate-600 mb-4">欣昕工程行粉絲專頁</p>
             <a href="https://www.facebook.com/profile.php?id=61583349074725" target="_blank" rel="noopener noreferrer" class="mt-auto bg-slate-900 text-white font-bold py-2 px-6 rounded-md hover:bg-slate-700 transition-colors duration-300 w-full">前往專頁</a>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm reveal-on-scroll hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 200ms;">
+          <div class="bg-white p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm reveal-on-scroll hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 200ms;">
             <div class="text-slate-700">
               <svg class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
             </div>
@@ -234,7 +369,7 @@
             <p class="text-slate-600 mb-4">@xinxin_eng</p>
             <a href="https://www.instagram.com/xinxin_engineering?igsh=MWYyaGplODQ4ZGpxaQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="mt-auto bg-slate-900 text-white font-bold py-2 px-6 rounded-md hover:bg-slate-700 transition-colors duration-300 w-full">追蹤我們</a>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm reveal-on-scroll hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 300ms;">
+          <div class="bg-white p-6 rounded-lg text-center flex flex-col items-center justify-between shadow-sm reveal-on-scroll hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 300ms;">
             <div class="text-slate-700">
               <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
@@ -275,15 +410,8 @@
   <footer class="bg-slate-900 text-gray-400">
     <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
       <div class="flex items-center gap-3 mb-4 md:mb-0">
-        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white">
-          <path d="M5 5 H95 V95 H5 Z"></path>
-          <path d="M5 40 H95"></path>
-          <path d="M5 75 H95"></path>
-          <path d="M37 75 V95"></path>
-          <path d="M63 75 V95"></path>
-          <path d="M95 40 A55 55 0 0 0 42 88"></path>
-          <path d="M50 40 A30 30 0 0 0 25 65"></path>
-        </svg>
+        <!-- Footer Logo Image: Replace src="logo.jpg" with your actual logo file path -->
+        <img src="media/logo.jpg" alt="XINXIN Logo" class="h-8 w-8 object-contain rounded">
         <div>
           <span class="text-lg font-black tracking-widest text-white">XINXIN</span>
           <span class="block text-xs font-semibold tracking-widest text-gray-400">ENGINEERING</span>
